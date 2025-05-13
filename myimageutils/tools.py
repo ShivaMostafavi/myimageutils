@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import ndimage
 from scipy.ndimage import generic_filter
-from scipy.io import sio
+import scipy.io as sio
 from pathlib import Path
 
 
