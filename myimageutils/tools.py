@@ -290,25 +290,7 @@ def classify_3d_cfr_stress(cfr_map, stress_map, show_plot=True):
 
         plt.tight_layout()
         plt.show()
-    # Plot
-    if show_plot:
-        plt.figure(figsize=(10, 6))
-        bars = plt.bar(counts.keys(), counts.values(),
-                       color=[region_colors.get(label, 'gray') for label in counts.keys()])
-        plt.xticks(rotation=45, ha='right')
-        plt.xlabel("Region")
-        plt.ylabel("Number of Voxels")
-        plt.title("Voxel Distribution by CFR Region")
 
-        # Add percentage labels on bars
-        for bar in bars:
-            height = bar.get_height()
-            percent = (height / total) * 100
-            plt.text(bar.get_x() + bar.get_width()/2, height + 5, f"{percent:.1f}%", 
-                     ha='center', va='bottom', fontsize=10)
-
-        plt.tight_layout()
-        plt.show()
 
     return dict(counts), labels_3d
 
