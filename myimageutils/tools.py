@@ -4,7 +4,7 @@ from scipy import ndimage
 from scipy.ndimage import generic_filter
 import scipy.io as sio
 from pathlib import Path
-
+import PerfusionImaging.tool as perfusion
 
 
 def load_mat_legacy(path):
